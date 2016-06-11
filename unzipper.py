@@ -13,14 +13,8 @@ if __name__ == "__main__":
     DEFAULT_EXTRACT_DIR = "data\\papers"
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", dest = "source", help = "source directory containing the archives")
+    parser.add_argument("-s", dest = "source", help = "source directory containing the archives", required = True)
     parser.add_argument("-d", dest = "destination", default = DEFAULT_EXTRACT_DIR, required = False, help = "destination directory")
 
     args = parser.parse_args(sys.argv[1:])
     unpackAll(args.source, args.destination)
-
-
-
-
-
-

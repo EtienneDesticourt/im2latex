@@ -1,7 +1,5 @@
 import re, os, sys
 
-
-
 def numGroups(pattern):
     "Returns the number of groups in a pattern"
     return re.compile(pattern).groups
